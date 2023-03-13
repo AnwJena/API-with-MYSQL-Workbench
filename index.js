@@ -1,9 +1,9 @@
 const express = require('express')
 const app = express()
 const connection = require('./database.js')
-
+const cors = require('cors');
 app.use(express.json())
-
+app.use(cors());
 
 
 //GET API FOR TOWER SUMMARY
