@@ -2,11 +2,18 @@ const express = require('express')
 const app = express()
 const http = require('http')
 const connection = require('./database.js')
+<<<<<<< HEAD
 require('dotenv').config();
 app.use(express.json())
 
 const hostname=process.env.HOSTNAME;
 const port=process.env.PORT;
+=======
+const cors = require('cors');
+app.use(express.json())
+app.use(cors());
+
+>>>>>>> 519e5d3e855a8dbc675e91a59c31f28354944647
 
 //GET API FOR TOWER SUMMARY
 app.get('/getControlTowerSummary',(req,res)=>{
