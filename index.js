@@ -2,18 +2,17 @@ const express = require('express')
 const app = express()
 const http = require('http')
 const connection = require('./database.js')
-<<<<<<< HEAD
+
 require('dotenv').config();
 app.use(express.json())
 
 const hostname=process.env.HOSTNAME;
 const port=process.env.PORT;
-=======
 const cors = require('cors');
 app.use(express.json())
 app.use(cors());
 
->>>>>>> 519e5d3e855a8dbc675e91a59c31f28354944647
+
 
 //GET API FOR TOWER SUMMARY
 app.get('/getControlTowerSummary',(req,res)=>{
@@ -255,25 +254,3 @@ app.listen(port,hostname,(err,res)=>{
     } else {
     console.log(`Backend server is running on port 4200!`)}
 })
-
-
-
-
-
-
-
-
-
-// const hostname = '127.0.0.1';
-// const port = 4200;
-
-// const server = http.createServer((req, res) => {
-//   res.statusCode = 200;
-//   res.setHeader('Content-Type', 'text/plain');
-//   res.end('Hello World');
-// });
-
-// server.listen(port, hostname, () => {
-//   console.log(`Server running at http://${hostname}:${port}/`);
-// });
-
